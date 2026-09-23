@@ -32,6 +32,7 @@ function calcularCoste($peso){
     }
 }
 
+
 switch($rolCliente){
     case "PREMIUM":
         if($montoCompra < 100.00){
