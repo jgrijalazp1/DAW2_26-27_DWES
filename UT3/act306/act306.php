@@ -24,24 +24,31 @@ En PHP, "01234" == 1234 devuelve true debido a la conversión implícita de tipo
 Puedes castear variables con (int) o (string) antes de la comparación.
 Código base
 
-$idUsuarioEntrada = "1050";
-$codigoAcceso = "01234";
-$estadoCuenta = "1";
-$idEsperado = 1050;
-$codigoEsperado = "01234";
-
 Variantes / Ampliaciones
 Investigar el comportamiento de la función is_numeric() combinada con comparaciones 
 estrictamente equivalentes para validar la entrada antes de procesarla.
 */
 
 $idUsuarioEntrada = "1050";
+$idEsperado = 100;
+
 $codigoAcceso = "01234";
-$estadoCuenta = "1";
-$idEsperado = 1050;
 $codigoEsperado = "01234";
 
-echo "<p>'lalala'</>";
+$estadoCuenta = "1";
 
+if( (int)$idUsuarioEntrada === $idEsperado ){
+    if( (int)$codigoAcceso === (int)$codigoEsperado){
+        if($estadoCuenta === "1"){
+            echo "Todo correcto. Puede continuar\n";
+        }else{
+            echo "Cuenta inactiva\n";
+        }
+    }else{
+         echo "Codigo incorrecto\n";
+    }
+}else{
+    echo "Usuario erroneo\n";
+}
 
 ?>
