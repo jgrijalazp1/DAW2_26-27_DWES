@@ -30,7 +30,7 @@ estrictamente equivalentes para validar la entrada antes de procesarla.
 */
 
 $idUsuarioEntrada = "1050";
-$idEsperado = 100;
+$idEsperado = 1050;
 
 $codigoAcceso = "01234";
 $codigoEsperado = "01234";
