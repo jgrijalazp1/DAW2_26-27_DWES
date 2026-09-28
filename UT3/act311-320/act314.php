@@ -3,14 +3,19 @@
 // de productos, calcula la potencia utilizando la instrucción for.
 
 $base = 2;
-$exponente = 5;
-$suma = 0;
+$exponente = 6;
+$suma = $base;
 
-for($i = 1; $i < $exponente; $i++){
+// asigno $suma = $base y establezco $i en 2 porque todo numero 
+// positivo ya esta en potencia 1. La primera vuelta del bucle es
+// la potencia 2.
 
-    $suma +=
+for($i = 2; $i <= $exponente; $i++){
+    $suma *= $base;
 }
 
-echo "Potencia: $potencia";
+echo "Base: $base";
+echo "\nExponente: $exponente";
+echo "\nPotencia: $suma";
 
 ?>
