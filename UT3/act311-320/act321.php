@@ -12,13 +12,28 @@ Después, muestra el contenido del array de la siguiente forma:
 */
 
 $numeros = [[]];
+$numAzar = 0;
+
+function esta(){
+    for($fila = 0; $fila < 6; $fila++){
+    for ($columna = 0; $columna < 9; $columna++){
+        $numAzar = rand(100, 999);
+        $numeros[$fila][$columna] ;
+    }
+}
+}
 
 for($fila = 0; $fila < 6; $fila++){
     for ($columna = 0; $columna < 9; $columna++){
-        $numeros[$fila][$columna] = rand(100, 999);
+        $numAzar = rand(100, 999);
+        if(esta($numAzar, $fila, $columna)){
+            $columna--;
+        }
     }
 }
 
 print_r($numeros);
+
+
 
 ?>
