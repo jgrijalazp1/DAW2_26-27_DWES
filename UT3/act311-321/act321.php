@@ -18,7 +18,7 @@ function esta(){
     for($fila = 0; $fila < 6; $fila++){
     for ($columna = 0; $columna < 9; $columna++){
         $numAzar = rand(100, 999);
-        $numeros[$fila][$columna] ;
+        $numeros[$fila][$columna] = 0;
     }
 }
 }
