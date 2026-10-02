@@ -12,16 +12,16 @@ valida los datos en imprimeTicketCompra.php.
 // Operador de fusion null
 // Si 'nombreProducto' es nulo o no existe asigna ''.
 $nombre = $_POST['nombreProducto'] ?? '';
-if($nombre != ''){ $nombre = 'HABER PUESTO UN NOMBRE, CAPULLO!!';};
+if ($nombre != '') {
+    $nombre = 'HABER PUESTO UN NOMBRE, CAPULLO!!';
+};
 
 // Si $_POST['cantidadProducto'] no existe o es nulo,
 // a $cantidad se le asigna '', que es una cadena vacia
 $cantidad = $_POST['cantidadProducto'] ?? '';
 
 // Si $cantidad no es entero, $cantidad = 'null'
-$cantidad = filter_var( $cantidad, FILTER_VALIDATE_INT, FILTER_NULL_ON_FAILURE);
+$cantidad = filter_var($cantidad, FILTER_VALIDATE_INT, FILTER_NULL_ON_FAILURE);
 
 $coste = $_POST['costeProducto'] ?? '';
-$coste = filter_var( $coste, FILTER_VALIDATE_INT);
-
-?>
+$coste = filter_var($coste, FILTER_VALIDATE_INT);
