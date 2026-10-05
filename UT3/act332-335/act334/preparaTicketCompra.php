@@ -9,19 +9,20 @@ con al menos 3 líneas de producto). Al enviar el formulario,
 valida los datos en imprimeTicketCompra.php.
 */
 
+// =============  VALIDACION DE DATOS  ======================
+
 // Operador de fusion null
-// Si 'nombreProducto' es nulo o no existe asigna ''.
+// Si 'nombreProducto' es nulo o no existe asigna ''
 $nombre = $_POST['nombreProducto'] ?? '';
-if ($nombre != '') {
-    $nombre = 'HABER PUESTO UN NOMBRE, CAPULLO!!';
-};
 
 // Si $_POST['cantidadProducto'] no existe o es nulo,
 // a $cantidad se le asigna '', que es una cadena vacia
 $cantidad = $_POST['cantidadProducto'] ?? '';
 
-// Si $cantidad no es entero, $cantidad = 'null'
-$cantidad = filter_var($cantidad, FILTER_VALIDATE_INT, FILTER_NULL_ON_FAILURE);
+// Si $cantidad no es entero, $cantidad = false
+$cantidad = filter_var($cantidad, FILTER_VALIDATE_INT);
 
 $coste = $_POST['costeProducto'] ?? '';
 $coste = filter_var($coste, FILTER_VALIDATE_INT);
+
+
